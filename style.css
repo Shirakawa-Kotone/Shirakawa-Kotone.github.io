@@ -414,3 +414,93 @@ p {
         min-height: 500px;
     }
 }
+
+/* 浅色模式 */
+body.light-mode {
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-highlight: rgba(255, 255, 255, 0.8);
+    --text-main: #1a1a2e;
+    --text-secondary: #666666;
+    --bg-dark: #f5f5f7;
+    background-color: var(--bg-dark);
+}
+
+body.light-mode .blob {
+    opacity: 0.3;
+}
+
+body.light-mode .liquid-bg {
+    background-image: none;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%);
+}
+
+body.light-mode .glass-panel {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .user-name {
+    color: #1a1a2e;
+}
+
+body.light-mode p {
+    color: #444444;
+}
+
+body.light-mode .tag {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #444444;
+}
+
+body.light-mode .tag:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .social-icon {
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #1a1a2e;
+}
+
+body.light-mode .social-icon:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+body.light-mode .tab-btn {
+    color: var(--text-secondary);
+}
+
+body.light-mode .tab-btn:hover {
+    color: var(--text-main);
+}
+
+body.light-mode .progress-bar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .dropdown-menu {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .dropdown-menu a {
+    color: #444444;
+}
+
+body.light-mode .dropdown-menu a:hover {
+    background: rgba(255, 143, 171, 0.2);
+    color: var(--accent-color);
+}
+
+body.light-mode h2::before {
+    background: var(--accent-color);
+}
+
+body.light-mode div[style*="background: rgba(255,255,255,0.05)"] {
+    background: rgba(0, 0, 0, 0.03) !important;
+}

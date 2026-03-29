@@ -16,8 +16,21 @@ function switchTab(tabId) {
     document.getElementById(tabId).classList.add('active');
 }
 
+// 切换深浅色模式
+function toggleTheme() {
+    document.body.classList.toggle('light-mode');
+    const isLight = document.body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+}
+
 // 简单的入场动画效果
 document.addEventListener('DOMContentLoaded', () => {
+    // 加载保存的主题
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+    }
+
     const fills = document.querySelectorAll('.progress-fill');
     fills.forEach(fill => {
         const width = fill.style.width;
