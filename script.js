@@ -26,4 +26,32 @@ document.addEventListener('DOMContentLoaded', () => {
             fill.style.width = width;
         }, 500);
     });
+
+    // 下拉菜单延迟隐藏
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        let hideTimeout;
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            menu.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                menu.style.display = 'none';
+            }, 300);
+        });
+
+        menu.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+        });
+
+        menu.addEventListener('mouseleave', () => {
+            hideTimeout = setTimeout(() => {
+                menu.style.display = 'none';
+            }, 300);
+        });
+    });
 });
