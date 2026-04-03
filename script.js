@@ -23,6 +23,11 @@ function toggleTheme() {
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
 }
 
+// 展开/收起日记
+function toggleDiary(entry) {
+    entry.classList.toggle('open');
+}
+
 // 简单的入场动画效果
 document.addEventListener('DOMContentLoaded', () => {
     // 加载保存的主题
