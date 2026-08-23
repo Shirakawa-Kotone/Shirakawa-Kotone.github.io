@@ -59,7 +59,8 @@
         <!-- 右侧 3/4 -->
         <main class="glass-panel content-area">
             <nav class="tabs-nav">
-                <button class="tab-btn active" onclick="switchTab('profile')">人物档案</button>
+                <button class="tab-btn active" onclick="switchTab('sites')">🚀 站点导航</button>
+                <button class="tab-btn" onclick="switchTab('profile')">人物档案</button>
                 <button class="tab-btn" onclick="switchTab('personality')">性格特质</button>
                 <button class="tab-btn" onclick="switchTab('origin')">诞生与琴房</button>
                 <button class="tab-btn" onclick="switchTab('daily')">日常与喜好</button>
@@ -69,8 +70,48 @@
 
             <div class="tab-content-container">
                 
+                <!-- 板块 0: 站点导航 -->
+                <div id="sites" class="tab-pane active">
+                    <h2>🚀 站点导航</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">欢迎来到白川琴音的小站，可以前往我的其他服务：</p>
+                    <div class="site-grid">
+                        <a class="site-card" href="https://gaokao.1awa1.ccwu.cc" target="_blank" rel="noopener">
+                            <div class="site-card-icon">🎓</div>
+                            <div class="site-card-info">
+                                <h3>高考数据查询</h3>
+                                <p>江西省高考录取数据查询与志愿填报参考</p>
+                                <span class="site-card-go">访问 →</span>
+                            </div>
+                        </a>
+                        <a class="site-card" href="https://serverpanel.1awa1.ccwu.cc" target="_blank" rel="noopener">
+                            <div class="site-card-icon">🖥️</div>
+                            <div class="site-card-info">
+                                <h3>MC 服务器面板</h3>
+                                <p>轻量级 Minecraft 服务器管理面板</p>
+                                <span class="site-card-go">访问 →</span>
+                            </div>
+                        </a>
+                        <a class="site-card" href="https://nickname.1awa1.ccwu.cc" target="_blank" rel="noopener">
+                            <div class="site-card-icon">✨</div>
+                            <div class="site-card-info">
+                                <h3>QQ 昵称生成器</h3>
+                                <p>QQ 彩色昵称生成器 · 选色 / 随机 / 一键复制</p>
+                                <span class="site-card-go">访问 →</span>
+                            </div>
+                        </a>
+                        <a class="site-card" href="https://blog.1awa1.ccwu.cc" target="_blank" rel="noopener">
+                            <div class="site-card-icon">📖</div>
+                            <div class="site-card-info">
+                                <h3>个人博客</h3>
+                                <p>白川琴音的日记与角色设定（本站）</p>
+                                <span class="site-card-go">访问 →</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
                 <!-- 板块 1: 人物档案 -->
-                <div id="profile" class="tab-pane active">
+                <div id="profile" class="tab-pane">
                     <h2>基本资料</h2>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px;">
                         <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px;">
